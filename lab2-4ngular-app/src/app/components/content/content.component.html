@@ -1,0 +1,20 @@
+<h2>Lab #2: 523419</h2>
+         <h5>Title description, March 26, 2020</h5>
+         <div class="card">
+            <div class="card-body">
+               <h4 class="card-title">Event Binding</h4>
+               <button type="button" (click) = "onUserClick($event)" class="btn btn-primary btn-lg btn-block">Please Click</button>
+               <button type="button" (dblclick) = "onUserDBClick($event)" class="btn btn-secondary btn-lg btn-block">Please Double
+               Click</button>
+            </div>
+         </div>
+         <br/>
+         <div class="card">
+            <div class="card-body">
+               <h4 class="card-title">Two-way Binding</h4>
+               <div class="form-group">
+                  <textarea class="form-control" [(ngModel)]="comment" rows="5" id="comment"></textarea><br/>
+                  <label for="comment">Comment: {{comment}}</label>
+               </div>
+            </div>
+         </div>

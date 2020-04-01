@@ -1,0 +1,28 @@
+<div class="container p-3 my-3 bg-primary text-white" style="margin-top:60px">
+	<h2>Parent Component</h2>
+	<div class="row">		
+		<div class="col-md-6">		
+			<div class="form-group">			
+				<input type="text" [(ngModel)]="textMessage" class="form-control">
+				<small id="helpId" class="form-text text-white">text status : {{status}}</small>											
+			</div>
+		</div>
+		<div class="col-md-6">Counter : {{childData}} </div>
+	</div>
+	<div class="row">	
+		<div class="col-md-6">
+			<button type="button" class="btn btn-success" (click) = "onClick2Child()" >Send via @Input</button>
+			<button type="button" class="btn btn-danger" (click) = "onClickViewChild()" >Send via @ViewChild</button>			
+		</div>
+		<div class="col-md-6">
+			<button type="button" class="btn btn-light" (click) = "update()" >Show child</button>			
+		</div>		
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<app-child (messageEvent)="receiveData($event)" [parentData] = "parentData" 
+			*ngIf='showChild'
+			></app-child>
+		</div>	
+	</div>
+</div>

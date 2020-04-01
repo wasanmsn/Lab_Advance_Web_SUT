@@ -1,0 +1,11 @@
+<div class="container p-3 my-3 bg-warning text-white" style="margin-top:60px">
+	<h3>Child Component</h3>
+	<div class="row">
+		<div class="col-md-6">
+			Counter : {{parentData}}
+		</div>
+		<div class="col-md-6">
+			<button type="button" class="btn btn-light" (click)="onClick2Parent()" >Send via @Output</button>
+		</div>
+	</div>
+</div>
