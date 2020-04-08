@@ -1,27 +1,13 @@
 # Lab4AngularApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+# แลปนี้ไม่มีมาก ทำเหมือนแลปที่แล้ว แต่อาจารย์สับขาหลอกนิดหน่อย
+ตอนไห้เล่นกับ FormArray เวลาจะส่งค่าไปมันไม่เหมือน กับ FormControl หรือ FormGroup(มั้งเท่าที่ลองแก้มา) ปกติเราใช้ ฟอร์มแล้วก็ชื่อฟืลด์ `formControlName = 'Name'` ไรประมาณนี้แต่สำหรับเข้าตัวนี้มันเหมือนไม่ได้ bind กับข้างหลัง(ไฟล์ ts) เลยใช้ตัวนี้แทน `[formControl]="aliases.controls[i]"` 
+ส่วนตัว validator ก็ โค้ดเหมือน ๆ กับ email ที่ไห้เราตรวจรหัสนักศึกษา ก่อนอื่นก็สร้าง ฟิลด์ใน ฟอร์มก่อนพร้อม pattern ( ก๊อบในเอกสารก็ได้ ) จากนั้น **อย่าลืม** สร้าง getter สำหรับ ฟิลด์นั้นด้วย 
+```JAVASCRIPT
+  get stid() {
+    return this.profileForm.get('stid');
+  }
+```
+ส่วนในไฟล์ `html` เราก็ทำเงื่อนใขคล้าย ๆ กับ email นั้นแหละแต่ ไห้เปลี่ยนตรง `*ngIf = "email.errors.email"` เปลี่ยนเป็น `*ngIf = stid.errors.pattern` แทน
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+และถ้าอยากทำไห้เหมือน VDO ก็ ไปดู Input placeholder มา กับ Ifelse ของ Angular
