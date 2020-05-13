@@ -1,0 +1,17 @@
+<div class="card">
+	<div class="card-header bg-secondary text-white">
+		<div class="float-left">
+			ngClass Directive
+		</div>
+		<button type="button" (click)="ngClassMethod()" class="btn btn-sm float-right"
+			[ngClass]="{'btn-danger':status,'btn-primary':!status}"
+		>Click
+		</button>
+	</div>
+	<div class="card-body" [ngClass]="{'alert-danger':status}">
+		<div>
+			Why Do I need to type these 2 pharagraphes they are too long 
+			and I can't copy-paste.FeelsBadMan.
+		</div>
+	</div>
+</div>

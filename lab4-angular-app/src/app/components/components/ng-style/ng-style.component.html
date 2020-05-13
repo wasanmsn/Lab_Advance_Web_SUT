@@ -1,0 +1,24 @@
+<div class="card">
+	<div class="card-header bg-secondary text-white">
+		<div class="float-left">ngStyle Directive </div>
+	</div>
+	<div class = "card-body">
+		<div class='row'>
+			<div class="col-md-4 text-center">
+				<h5>Red</h5>
+				<input type="number" class="form-control" [(ngModel)] ="r"
+					(change)="ngStyleMethod()" min="0" max="255">
+			</div>
+			<div class="col-md-4 text-center">
+				<h5>Green</h5>
+				<input type="number" class="form-control" [(ngModel)] ="g"
+					(change)="ngStyleMethod()" min="0" max="255">
+			</div>
+			<div class="col-md-4 text-center">
+				<h5>Blue</h5>
+				<input type="number" class="form-control" [(ngModel)] ="b"
+					(change)="ngStyleMethod()" min="0" max="255">
+			</div>
+		</div>
+	</div>
+</div>

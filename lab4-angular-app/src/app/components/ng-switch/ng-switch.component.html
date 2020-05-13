@@ -1,0 +1,40 @@
+<div class="card">
+	<div class="card-header bg-secondary text-white">
+		<div class = "float-left">ngSwitch Directive</div>		
+	</div>
+	<div class="card-body">
+			<div class="row">
+				<div class="col-md-12">
+					<input type="number" [(ngModel)] = "lotto" class="form-control" placeholder="Check my Lotto">
+	
+				</div>
+			</div><br>
+				<div class="row text-center">
+					<div class="col-md-12">
+						<div [ngSwitch] = "lotto">
+								<div *ngSwitchCase="111111">
+									<div class="alert alert-success" role="alert">
+										<strong>Congratulation you won the first prize!</strong>
+									</div>
+								</div>
+								<div *ngSwitchCase="222222">
+									<div class="alert alert-success" role="alert">
+										<strong>Congratulation you won the second prize!</strong>
+									</div>
+								</div>
+								<div *ngSwitchCase="333333">
+									<div class="alert alert-success" role="alert">
+										<strong>Congratulation you won the third prize!</strong>
+									</div>
+								</div>
+								<div *ngSwitchDefault>
+									<div class="alert alert-danger" role="alert">
+										<strong>Sorry!</strong>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			
+		</div>
+</div>
