@@ -1,1 +1,36 @@
-<app-signup></app-signup>
+<div class='container-fluid' [ngStyle] = "{'background-color': styleData}"><br>
+	<div class='row'>
+		<div class='col-12'>
+			<div class='jumbotron jumbotron-fluid bg-dark text-white'>
+				<div class='container'>
+					<h1 class="display-3">523419 Advanced Web Application Development</h1>
+					<p class="lead">Lab #5</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class='row' style='margin-top:30px'>
+		<div class="col-6">
+			<app-ng-class></app-ng-class>
+		</div>
+		<div class="col-6">
+			<app-ng-style (messageEvent)="receiveData($event)"></app-ng-style>
+		</div>
+	</div>
+	<div class="row" style="margin-top:30px">
+		<div class="col-6">
+
+			<app-ng-if></app-ng-if>
+		</div>
+		<div class="col-6">
+		
+			<app-ng-switch></app-ng-switch>
+		</div>
+	</div>
+	<div class='row' style='margin-top:30px'>
+		<div class="col-12">
+			<app-ng-for></app-ng-for>
+		</div>
+	
+	</div><br>
+</div>

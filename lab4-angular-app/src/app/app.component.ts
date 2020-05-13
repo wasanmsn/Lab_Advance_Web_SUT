@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+	styleData:string;
+	
+	receiveData($event){
+		this.styleData = $event;
+	}
   title = 'lab4-angular-app';
 }
