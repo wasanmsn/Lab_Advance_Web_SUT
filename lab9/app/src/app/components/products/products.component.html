@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a routerLink="first" class="navbar-brand btn btn-dark"><i class="fa fa-home" aria-hidden="true"></i></a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        
+      </ul>
+
+      <button type="button" class="btn btn-dark" (click)="signout()">Sign out</button>
+    </div>
+    
+</nav>
+
+<div class="container-fluid" style="margin-top:30px">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>All Product</h2>
+        <div class="table-responsive-md">  
+        <table class="table table-striped table-inverse">
+            <thead class="thead-inverse">
+                <tr>
+                    <th>ID.</th>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Detail</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of products; index as i">
+                    <td scope="row">{{item.id}}</td>
+                    <td>{{item.type}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.detail}}</td>
+                    <td>{{item.quantity}}</td>
+                    <td>{{item.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+</div>
