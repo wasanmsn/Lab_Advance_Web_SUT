@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "cors": "^2.8.5",
     "mongoose": "^5.8.10",
     "body-parser": "^1.19.0"
